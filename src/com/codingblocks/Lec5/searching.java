@@ -5,7 +5,7 @@ public class searching {
     public static void main(String[] args) {
 
         int ar[]={1,2,3,4,5};
-        System.out.println(binary(ar,3));
+        System.out.println(linearsearch(ar,3));
     }
 
     public static int linearsearch(int ar[],int item){
@@ -36,6 +36,7 @@ public class searching {
              end=mid-1;
          }
      }
+
         return -1;
     }
 }

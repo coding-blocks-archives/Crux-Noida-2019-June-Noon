@@ -43,6 +43,10 @@ public class sorting {
 
                     swap.swapar(ar,j,j-1);
                 }
+
+                else{
+                    break;
+                }
             }
         }
     }
