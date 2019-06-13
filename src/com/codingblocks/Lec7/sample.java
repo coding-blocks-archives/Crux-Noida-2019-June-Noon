@@ -27,6 +27,7 @@ public class sample {
 
     public static void p1() {
         System.out.println("aa rha hun");
+        p0();
         System.out.println("jaa rha hun");
     }
 
