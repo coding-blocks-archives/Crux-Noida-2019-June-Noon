@@ -19,6 +19,7 @@ public class sample {
              p2();
         System.out.println("jaa rha hun");
     }
+
     public static void p2() {
         System.out.println("aa rha hun");
         p1();
@@ -31,7 +32,7 @@ public class sample {
         System.out.println("jaa rha hun");
     }
 
-    public static void p0(){
+    public static void p0() {
 
     }
 
