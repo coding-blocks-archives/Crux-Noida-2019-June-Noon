@@ -11,6 +11,7 @@ public class recusrionques {
 //        System.out.println(sorted(ar,0));
 //        pattern1(4,0);
         bubblesort(ar,ar.length-1,0);
+
         System.out.println(Arrays.toString(ar));
     }
 
