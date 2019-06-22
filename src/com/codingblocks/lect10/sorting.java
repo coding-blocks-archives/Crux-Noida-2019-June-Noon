@@ -1,28 +1,29 @@
 package com.codingblocks.lect10;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class sorting {
 
     public static void main(String[] args) {
-        int ar[]={5,4,9,2,1,0};
+        int ar[] = {5, 4, 9, 2, 1, 0};
         System.out.println(Arrays.toString(mergesort(ar)));
 
 
     }
 
-    public static int[] mergesort(int[] ar){
+    public static int[] mergesort(int[] ar) {
 
-        if(ar.length==1){
+        if (ar.length == 1) {
             return ar;
         }
-        int mid=ar.length/2;
 
-        int first[]=mergesort(Arrays.copyOfRange(ar,0,mid));
-        int second[]=mergesort(Arrays.copyOfRange(ar,mid,ar.length));
 
-        return merge(first,second);
+        int mid = ar.length / 2;
+
+        int first[] = mergesort(Arrays.copyOfRange(ar, 0, mid));
+        int second[] = mergesort(Arrays.copyOfRange(ar, mid, ar.length));
+
+        return merge(first, second);
     }
 
     private static int[] merge(int[] first, int[] second) {
@@ -43,18 +44,18 @@ public class sorting {
                 k++;
             }
         }
-        while(i<first.length){
+        while (i < first.length) {
             mix[k] = first[i];
             i++;
             k++;
         }
 
-        while(j<second.length){
+        while (j < second.length) {
             mix[k] = second[j];
             j++;
             k++;
         }
-return mix;
+        return mix;
     }
 
 }
