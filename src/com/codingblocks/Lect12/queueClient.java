@@ -2,21 +2,17 @@ package com.codingblocks.Lect12;
 
 public class queueClient {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        queue q= new queue();
-        q.insert(10);
-        q.insert(20);
-        q.insert(30);
-        q.display();
-        System.out.println();
-        try{
-        System.out.println(q.remove());
-        }catch (Exception e){
-            System.out.println(e.getMessage());
+        queueoptimized q= new queueoptimized(100);
+        for (int i = 0; i <100 ; i++) {
+            q.insert(i);
+            q.display();
         }
-        System.out.println();
+        for (int i = 0; i <100 ; i++) {
+            q.remove();
+            q.display();
+        }
 
-        q.display();
     }
 }
