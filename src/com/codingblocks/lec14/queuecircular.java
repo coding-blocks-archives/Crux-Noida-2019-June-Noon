@@ -1,14 +1,14 @@
-package com.codingblocks.Lect12;
+package com.codingblocks.lec14;
 
 public class queuecircular {
 
-    private int data[];
+    protected int data[];
 
     private static int DEFAULT_SIZE=10;
 
-    private int end=0;
-    private int front=0;
-    private int size=0;
+    protected int end=0;
+    protected int front=0;
+    protected int size=0;
     public queuecircular() {
         this(DEFAULT_SIZE);
     }
@@ -32,6 +32,7 @@ public class queuecircular {
         if(isFull()){
         return false;
         }
+        System.out.println("adding"+ element);
         data[end++]=element;
         end=end%data.length;
         size++;

@@ -1,7 +1,7 @@
 package com.codingblocks.lect13;
 
 public class Engine {
-  public int ar=7;
+  protected int ar=7;
     public void start(){
         System.out.println("Iam starting ");
     }
