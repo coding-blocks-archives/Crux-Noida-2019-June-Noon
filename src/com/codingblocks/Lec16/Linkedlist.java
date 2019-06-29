@@ -113,6 +113,36 @@ public class Linkedlist {
 
     }
 
+    public Linkedlist merge(Linkedlist first , Linkedlist second){
+
+        Node firstnode=first.head;
+        Node secondnode=second.head;
+
+        Linkedlist linkedlist=new Linkedlist();
+        while(firstnode!=null && secondnode!=null){
+
+            if(firstnode.value<secondnode.value){
+                linkedlist.insertlast(firstnode.value);
+                firstnode=firstnode.next;
+            }
+            else{
+                linkedlist.insertlast(secondnode.value);
+                secondnode=secondnode.next;
+            }
+        }
+
+        while(firstnode!=null){
+            linkedlist.insertlast(firstnode.value);
+            firstnode=firstnode.next;
+        }
+          while(secondnode!=null) {
+              linkedlist.insertlast(secondnode.value);
+              secondnode = secondnode.next;
+          }
+
+          return linkedlist;
+    }
+
 
 
     public Node get(int index){
@@ -185,5 +215,10 @@ public class Linkedlist {
            this.value = value;
            this.next = next;
        }
+
+//       @Override
+//       public String toString() {
+//           return Integer.toString(value);
+//       }
    }
 }
