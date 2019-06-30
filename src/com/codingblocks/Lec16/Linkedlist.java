@@ -110,6 +110,8 @@ public class Linkedlist {
                 node=node.next;
             }
         }
+        tail=node;
+        tail.next=null;
 
     }
 
