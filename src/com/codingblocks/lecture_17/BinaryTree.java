@@ -32,6 +32,18 @@ public class BinaryTree {
         display(root, "", "root");
     }
 
+    public boolean find(int target){
+        return find(root, target);
+    }
+
+    private boolean find(Node node, int target) {
+        if (node == null){
+            return false;
+        }
+
+        return node.value == target || find(node.left, target) || find(node.right, target);
+    }
+
 
     private void display(Node node, String indent, String type) {
         if (node == null){
@@ -41,6 +53,17 @@ public class BinaryTree {
         System.out.println(indent + node.value + " " + type);
         display(node.left, indent + "\t", "left");
         display(node.right, indent + "\t", "right");
+    }
+
+    private int max(Node node){
+        if (node == null){
+            return Integer.MIN_VALUE;
+        }
+
+        int max = Math.max(max(node.left), max(node.right));
+
+        return Math.max(max, node.value);
+
     }
 
     private class Node{
