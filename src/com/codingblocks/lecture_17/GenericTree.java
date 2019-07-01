@@ -1,9 +1,6 @@
 package com.codingblocks.lecture_17;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 public class GenericTree {
 
@@ -96,6 +93,21 @@ public class GenericTree {
             }
         }
     }
+
+    public void levelOrderItr(){
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()){
+            Node top = queue.remove();
+            System.out.println(top.value);
+            for (int i = 0; i < top.children.size() ; i++) {
+                queue.add(top.children.get(i));
+            }
+        }
+    }
+
+
 
     public int height(){
         return height(root);
