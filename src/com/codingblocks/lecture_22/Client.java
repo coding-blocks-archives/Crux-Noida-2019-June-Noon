@@ -1,4 +1,4 @@
-package com.codingblocks.lecture_23;
+package com.codingblocks.lecture_22;
 
 public class Client {
     public static void main(String[] args) {
